@@ -28,7 +28,7 @@ class Solution(object):
         """
         medals = ["Gold Medal","Silver Medal", "Bronze Medal"]
         scores = [(i, score) for i, score in enumerate(nums)]
-        sorted_scores = sorted(scores, key=lambda (l,r): r, reverse=True)
+        sorted_scores = sorted(scores, key=lambda (index, score): score, reverse=True)
 
         for i in range(0,len(nums)):
             score_index=sorted_scores[i][0]
